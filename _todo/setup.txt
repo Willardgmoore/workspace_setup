@@ -76,6 +76,7 @@ cd ~/.rbenv
 git pull
 -------------------------------
 Install Command line tools(via iTerm)
+
 --
 xcode-select --install
 -------------------------------
@@ -88,6 +89,11 @@ Config fish(via iTerm)
 
 --
 fish_config
+-------------------------------
+Put postgres in your path(via iTerm,not in fish)
+
+--
+export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.4/bin
 -------------------------------
 Set up pg gem to work properly
 
