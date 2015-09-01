@@ -1,0 +1,147 @@
+Install X-Code(via App Store)
+Install Slack(via App Store)
+Install Sublime
+Install iTerm
+Install Fish
+Install Github App (Auto sets up SSH key)
+Install Postgres
+Install pgadmin3
+-------------------------------
+Install Homebrew(via iTerm)
+--
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+-------------------------------
+Install rbenv(via iTerm)
+--
+git clone https://github.com/sstephenson/rbenv.git ~/.rbenv
+--
+echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bash_profile
+--
+echo 'eval "$(rbenv init -)"' >> ~/.bash_profile
+--
+(Quit iTerm and restart)
+--
+git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
+--
+rbenv install 2.2.2
+--
+rbenv global 2.2.2
+-------------------------------
+Install rbenv(via iTerm)
+
+brew install rbenv
+--
+echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bash_profile
+--
+echo 'eval "$(rbenv init -)"' >> ~/.bash_profile
+--
+(Quit iTerm and restart)
+--
+brew install ruby-build
+--
+rbenv install 2.2.2
+--
+rbenv global 2.2.2
+—-
+gem install bundler
+—-
+rbenv rehash
+-------------------------------
+Loads rbenv when not in fish
+Sets sublime shortcut
+--
+vim ~/.bash_profile
+--
+Hit d(until nothing is showing)
+--
+:set paste(enter)(i Inster mode)
+--
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
+alias sbl='open -a "Sublime Text"'
+--
+esc
+--
+:wq(enter)
+-------------------------------
+Fish shell setup
+--
+vim ~/.config/fish/config.fish
+--
+:set paste(enter)(i Inster mode)
+--
+set PATH $HOME/.rbenv/bin $PATH
+set PATH $HOME/.rbenv/shims $PATH
+rbenv rehash >/dev/null ^&1
+alias sbl='open -a "Sublime Text"'
+--
+esc
+--
+:wq(enter)
+-------------------------------
+Update rbenv(via iTerm)
+--
+cd ~/.rbenv
+--
+git pull
+-------------------------------
+Install Command line tools(via iTerm)
+--
+xcode-select --install
+-------------------------------
+
+Install Git(via iTerm)
+--
+brew install git
+-------------------------------
+Config fish(via iTerm)
+--
+fish_config
+-------------------------------
+
+Set up pg gem to work properly
+--
+make sure postgresql is open and running
+--
+gem install pg -- --with-pg-config=/Applications/Postgres.app/Contents/Versions/9.4/bin/pg_config
+--
+gem install pg -v ‘0.18.2’ -- --with-pg-config=/Applications/Postgres.app/Contents/Versions/9.4/bin/pg_config
+-------------------------------
+
+Config sublime text
+--
+#Auto save
+not focused
+command p open file
+command f to search
+-------------------------------
+Sublime text built in shortcuts
+--
+CMD + P - search for a file and open it
+CMD + F - current file search
+SHIFT + CMD + F - project wide text search
+hold down ALT for vertical selection
+-------------------------------
+Sublime text package manager
+--
+1) go to https://packagecontrol.io/installation
+2) pick sublime text 2 or 3 depending on your installation
+3) read the simple installation instructions
+4) when you have it installed you should be able to SHIFT + CMD + P to open a prompt
+5) type in: Package Control: Install Package and click enter
+6) a prompt should pop up with all available
+7) search for a package, click it to install and that's it
+
+Recommended Sublime Text Packages
+scss
+better coffeescript
+haml
+rspec
+-------------------------------
+Install gems
+rails
+pry
+devise
+bundler
+-------------------------------
+Add Comment Collapse
